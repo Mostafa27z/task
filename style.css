@@ -1,0 +1,537 @@
+/* تأكد أن السلايدر لا يعرض أكثر من شريحة فوق بعضها */
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item.active {
+  display: flex !important;
+}
+.custom-round {
+  position: relative;
+  border-top-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  overflow: hidden;
+}
+
+.custom-round::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 36, 75, 0.4); /* الأزرق الداكن بشفافية */
+  z-index: 1;
+}
+
+/* تأكد من أن العناصر مثل الأيقونة تظهر فوق التعتيم */
+.play-icon {
+  z-index: 2;
+}
+
+
+.custom-svg-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+    width: 130px;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  .custom-svg-btn svg {
+    width: 100%;
+    height: 100%;
+  }
+
+#heroCarousel .carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.x::before{
+   background: transparent !important; 
+}
+.carousel-ite::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.carousel-item .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* إصلاح الخلفية والشفافية */
+.hero-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-slide .container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-slide h1,
+.hero-slide p {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+.carousel-indicators {
+  bottom: 20px; /* المسافة من الأسفل */
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #bbb;
+  border: none;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.carousel-indicators .active {
+  width: 30px;
+  background-color: #2491CD; /* الأزرق */
+  border-radius: 25px;
+}
+.red-col{
+    background-color: #FA4053;
+}
+.stat-box {
+  /* background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+  height: 100%;
+  text-align: start;
+}
+.login-button-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.login-button-wrapper:hover {
+  transform: scale(1.03);
+}
+.custom-rounded img  {
+  border-radius: 0 5rem 5rem 5rem; /* top-left 0, others rounded */
+  height: max-content;
+}
+.section-title {
+  position: relative;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.section-title .decor-line {
+  width: 40px;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #0d6efd;
+  position: relative;
+}
+
+.section-title .decor-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.principle-card {
+  position: relative;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.principle-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.principle-card h5 {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.custom-svg-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.section-t {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.decor-line {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 260px;
+  height: 4px;
+  background-color: #2491cd;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  background-color: #2491cd;
+  border-radius: 50%;
+}
+.principle-card {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;      /* Vertical centering */
+  justify-content: center;  /* Horizontal centering */
+  color: white;
+  text-align: center;
+}
+
+    .principle-card .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    
+
+.principle-card h5 {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+
+    .glide__slide {
+      padding: 0 10px;
+    }
+
+    .glide {
+      padding: 0 20px;
+    }
+
+.accordion-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+.bg-warning{
+  background-color: #FF9800 !important;
+}
+.accordion-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: right;
+  padding: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-toggle:hover {
+  background-color: #f1f1f1;
+}
+
+.accordion-section {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+ 
+  max-height: 280px;  /* adjust to match your design */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.accordion-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.accordion-body.scrollable {
+  max-height: 330px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-top: none;
+    
+  overflow-y: auto;
+}
+
+/* Optional: Styling Accordion Items */
+.accordion-button {
+  text-align: right;
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e9ecef;
+}
+
+.accordion-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.team-card {
+  background: linear-gradient(180deg, #A59E79 0%, rgba(63, 60, 46, 0.01) 100%);
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.team-desc.scrollable {
+  max-height: 110px;
+  overflow-y: auto;
+  text-align: justify;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  scrollbar-width: thin;
+}
+
+.glide__arrow {
+  background-color: #2491CD;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  font-size: 1.5rem;
+}
+
+.glide__bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.glide__bullet.glide__bullet--active {
+  background-color: #2491CD;
+  width: 24px;
+  border-radius: 12px;
+}
+.carousel-indicators {
+  bottom: 20px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-indicators [data-bs-target],
+.glide__bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #bbb;
+  border: none;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.carousel-indicators .active,
+.glide__bullet.glide__bullet--active {
+  width: 30px;
+  background-color: #2491CD;
+  border-radius: 25px;
+}
+.activity-img-wrapper {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.activity-img {
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.activity-img-wrapper:hover .activity-img {
+  transform: scale(1.05);
+}
+.more-btn-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.more-btn-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.more-btn-wrapper .btn svg {
+  transition: transform 0.3s ease;
+}
+
+.more-btn-wrapper:hover .btn svg {
+  transform: translateX(4px);
+}
+.branch-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #2186c4;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.branch-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.branch-img img {
+  object-fit: cover;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.branch-card:hover .branch-img img {
+  transform: scale(1.05);
+}
+
+.branch-body {
+  background-color: #2186c4;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 0.4em 0.75em;
+  border-radius: 20px;
+}
+.contact-cta-section {
+  min-height: 400px;
+}
+
+.contact-cta-content {
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 100%;
+}
+
+.contact-btn {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  width: 180px;
+  height: 54px;
+}
+
+.contact-btn svg {
+  width: 100%;
+  height: auto;
+}
+
+.contact-btn span {
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .contact-cta-content h2 {
+    font-size: 1.25rem;
+  }
+}
+
+
+.footer-bg {
+  background-color: #1E7AAD;
+  margin-top: 15px;
+}
+
+.social-icon {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.footer {
+  padding-top: 1rem;
+  
+   /* خلفية خارجية إن وجدت */
+}
